@@ -9,10 +9,6 @@ venv/
 # VSCode
 .vscode/
 
-# Data
-*.csv
-*.xlsx
-
 # OS
 .DS_Store
 Thumbs.db
