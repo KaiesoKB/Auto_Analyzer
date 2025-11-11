@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto-Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!-- Plotly for charts -->
+</head>
+<body>
+    <div class="container">
+        <h1>Auto-Analyzer</h1>
+
+        <!-- File Upload -->
+        <input type="file" id="fileInput" accept=".csv,.xlsx">
+        <!-- <button id="uploadBtn">Upload File</button> -->
+
+        <!-- Dataset Info -->
+        <div id="datasetInfo"></div>
+
+        <!-- Cleaning Options -->
+        <h2>Data Cleaning</h2>
+        <label>
+            <input type="checkbox" id="removeOutliers"> Remove Outliers
+        </label>
+
+        <div id="outlierMethodContainer" style="display: none; margin-top: 5px;">
+            <p>Select Outlier Removal method:
+                <select id="outlierMethod">
+                    <option value="IQR">IQR</option>
+                    <option value="Z-Score">Z-Score</option>
+                </select>
+            </p>
+        </div>
+        <button id="cleanBtn">Clean Data</button>
+
+        <div id="cleanReport"></div>
+
+        <!-- Analysis -->
+        <h2>Data Analysis</h2>
+        <select id="chartType">
+            <option value="Bar">Bar</option>
+            <option value="Line">Line</option>
+            <option value="Scatterplot">Scatterplot</option>
+            <option value="Histogram">Histogram</option>
+            <option value="Boxplot">Boxplot</option>
+            <option value="Heatmap">Heatmap</option>
+            <option value="Pairplot">Pairplot</option>
+            <option value="Pie">Pie</option>
+        </select>
+        <button id="featureSelection">Select Features</button>
+
+        <div id="featuresSelected"></div>
+        <button id="generateChartBtn">Generate Chart</button>
+
+        <!-- Chart -->
+        <div id="chartDiv" style="width:100%; height:600px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
