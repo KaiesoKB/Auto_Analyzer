@@ -12,3 +12,7 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# files
+Sample - Superstore.csv
+test_upload.py
